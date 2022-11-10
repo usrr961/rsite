@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hero360</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.js"></script>
+    <script src="https://unpkg.com/qrcode-generator@1.4.4/qrcode.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/addons/p5.sound.min.js"></script>
+     <link href="http://fonts.cdnfonts.com/css/google-sans" rel="stylesheet">
+    <style>html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans";
+  background:rgba(255,255,255);
+  font-family: 'Product Sans', sans-serif;
+font-family: 'Product Sans Thin', sans-serif;
+font-family: 'Product Sans Light', sans-serif;
+font-family: 'Product Sans Medium', sans-serif;
+font-family: 'Product Sans Black', sans-serif;
+}
+.hider{
+  visibility:hidden;}
+.bt{
+  margin-left: 5px;
+  background-color: #F5F0F0;
+  border-radius:7px;
+  border: 1px solid #000000;
+  color: rgb(0,0,0);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+}
+.fs{
+  margin-left: 5px;
+  background-color: #CCCACA;
+  border-radius:7px;
+  border: 1px solid #000000;
+  color: rgb(0,0,0);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+}
+.sel{
+    font-size: 1rem;
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--accent);
+    border-radius: 10px;
+    text-align: left;
+    outline: rgba(255,0,0,0);
+   background:rgba(255,255,255,0);
+    width: 10rem;
+    height: 5.5%;
+    transition: border-color calc(var(--transition, 0.2) * 1s) ease;
+}
+
+.print {
+  display: flex;
+    font-size: 1.25rem;
+    border-style: solid;
+    text-align: left;
+    outline: rgba(255,0,0,0);
+  background-color: #30D2DA;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+}
+.put{
+   font-family: "Open Sans";
+  resize: both;
+   display: flex;
+    padding: 5px 9px;
+    font-size: 1.25rem;
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--accent);
+    border-radius: 10px;
+    text-align: left;
+    outline: rgba(255,0,0,0);
+    width: 8.6rem;
+    height: 5.5%;
+    transition: border-color calc(var(--transition, 0.2) * 1s) ease;
+}
+.print {
+  background-color: #FFFFFF;
+  border-width: 1px;
+  border-radius: 15px;
+  border-style: solid;
+  color: rgb(0,0,0);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  height:1.5rem;
+}
+.txt {
+  padding: 0px 3px 0px 3px;
+  background-color: #FFFFFF;
+  border-width: 1px;
+  border-radius:10px;
+  border-style: solid;
+  color: rgb(0,0,0);
+  text-align: left;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  height:1.5rem;
+  margin-bottom: 0px;
+  margin-top: -10px;
+}
+</style>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <main>
+         <p id = "txt"> </p>
+    </div>
+    <button onclick=" fsify();" class = "fs">Full Screen</button>
+    <button onclick="ns('https://editor.p5js.org/nrayan678/full/vbVglCXNR')" class = "bt">Morse</button>
+    <button onclick="ns('https://editor.p5js.org/nrayan678/full/gGoqOUrOZ')" class = "bt">Braille</button>
+    <button onclick="ns('https://editor.p5js.org/nrayan678/full/BSdDJv5YD')" class = "bt">Tools Rebuilt</button>
+    <button onclick="ns('https://editor.p5js.org/nrayan678/full/NPqZKB682')" class = "bt">Weather App</button>
+    <button onclick="ns('https://editor.p5js.org/nrayan678/full/XkF9t0i17')" class = "bt">German Dictionary</button>
+    <button onclick="ns('https://editor.p5js.org/nrayan678/full/grT-5bJNJ')" class = "bt">Portuguese Dictionary</button>
+    <button onclick="ns('https://editor.p5js.org/nrayan678/full/efz0E6xyY')" class = "bt">English Dictionary</button>
+<button onclick="ns('https://editor.p5js.org/nrayan678/full/WVbj3H-jy')" class = "bt">Piano App</button>
+    <button onclick="ns('https://editor.p5js.org/nrayan678/full/pNl6whwIJ')" class = "bt">Spanish Dictionary</button>
+    <button onclick="ns('https://editor.p5js.org/nrayan678/full/pbEMfpCix')" class = "bt">Line Distances and Midpoints</button>
+     <button onclick="ns('https://editor.p5js.org/nrayan678/full/0qbb8gJUXT')" class = "bt">Snakish</button>
+     <button onclick="ns('https://editor.p5js.org/nrayan678/full/-ZuTD9cvW')" class = "bt">Graphing Calculator</button>
+    <button onclick="ns('https://editor.p5js.org/nrayan678/full/9j-N06wrj')" class = "bt">QR Code Generator</button>
+    <button onclick="ns('https://editor.p5js.org/nrayan678/full/g-Yfd4yrD')" class = "bt">Picture Editor</button>
+    <button onclick="ns('https://editor.p5js.org/nrayan678/full/6aTw9W5oF')" class = "bt">Wordle</button>
+    <button onclick="ns('https://editor.p5js.org/nrayan678/full/VnGlWQjWb')" class = "bt">Random Numbers</button>
+    <button onclick="ns('https://editor.p5js.org/nrayan678/full/0YyPTAsAu')" class = "bt">To Do List</button>
+    <button onclick="ns('https://editor.p5js.org/nrayan678/full/6EywTw0V9')" class = "bt">Time and Date</button>
+    <button onclick="ns('https://editor.p5js.org/nrayan678/full/EhZsNrlIZ')" class = "bt">French Dictionary</button>
+    <button onclick="ns('https://editor.p5js.org/nrayan678/full/a6oUYwZt_')" class = "bt">Rock Paper Scissors</button>
+    <button onclick="ns('https://editor.p5js.org/nrayan678/full/8E7AeWwFE')" class = "bt">UTC Global Time</button>
+    <button onclick="ns('https://editor.p5js.org/nrayan678/full/Bfu5uK2V9')" class = "bt">US Nationwide Time</button>
+    
+    <select id="MySelectMenu" class="sel">
+      <option value="https://editor.p5js.org/nrayan678/full/vbVglCXNR">Morse code</option>
+      <option value="https://editor.p5js.org/nrayan678/full/Cv-oTr5Ee">Home Page</option>
+      <option value="https://editor.p5js.org/nrayan678/full/gGoqOUrOZ">Braille</option>
+      <option value="https://editor.p5js.org/nrayan678/full/BSdDJv5YD">Tools Rebuilt</option>
+      <option value="https://editor.p5js.org/nrayan678/full/NPqZKB682">Weather App</option>
+      <option value="https://editor.p5js.org/nrayan678/full/XkF9t0i17">German Dictionary</option>
+      <option value="https://editor.p5js.org/nrayan678/full/grT-5bJNJ">Portuguese Dictionary</option>
+      <option value="https://editor.p5js.org/nrayan678/full/efz0E6xyY">English Dictionary</option>
+      <option value="https://editor.p5js.org/nrayan678/full/WVbj3H-jy">Piano Player</option>
+      <option value="https://editor.p5js.org/nrayan678/full/pNl6whwIJ">Spanish Dictionary</option>
+      <option value="https://editor.p5js.org/nrayan678/full/pbEMfpCix">Line Distances and Midpoints</option>
+      <option value="https://editor.p5js.org/nrayan678/full/0qbb8gJUXT">Snakish</option>
+      <option value="https://editor.p5js.org/nrayan678/full/-ZuTD9cvW">Graphing Calculator</option>
+      <option value="https://editor.p5js.org/nrayan678/full/9j-N06wrj">QR Code Generator</option>
+      <option value="https://editor.p5js.org/nrayan678/full/g-Yfd4yrD">Picture Editor</option>
+      <option value="https://editor.p5js.org/nrayan678/full/6aTw9W5oF">Wordle</option>
+     <option value="https://editor.p5js.org/nrayan678/full/VnGlWQjWb">Random Number Guess</option>
+      <option value="https://editor.p5js.org/nrayan678/full/0YyPTAsAu">To Do List</option>
+       <option value="https://editor.p5js.org/nrayan678/full/6EywTw0V9">Time and Date</option>
+     <option value="https://editor.p5js.org/nrayan678/full/EhZsNrlIZ">French Dictionary</option>
+      <option value="https://editor.p5js.org/nrayan678/full/a6oUYwZt_">Rock Paper Scissors</option>
+      <option value="https://editor.p5js.org/nrayan678/full/8E7AeWwFE">UTC Global Time</option>
+       <option value="https://editor.p5js.org/nrayan678/full/Bfu5uK2V9">US Nation Time</option>
+<!--        <option value="https://docs.google.com/gview?url=http://ieee802.org/secmail/docIZSEwEqHFr.doc&embedded=true">QR</option> -->
+    </select>
+    <button onclick="newSrc();" class= "print">Change Program</button>
+    <button onclick=" share();" class = "fs">Share</button>
+    <p id="Amount" class="txt"> </p>
+
+      <iframe src="idex.html" id="MyFrame" class="friends" width="500" height="500" ></iframe>
+    </main>
+    <script>
+      //September 20 2022
+menulength = document.getElementById("MySelectMenu").options.length
+let tagDiv;
+
+function setup(){
+  createCanvas(10,10)
+  tagDiv = createDiv();
+  text(menulength,0,0)
+  document.getElementById("Amount").innerHTML='App count: '+menulength;
+}
+function getIframeTitle() {
+  // getting our iframe
+  var iframe = document.getElementById("myFrame");
+  // logging the iframe's title
+  console.log(iframe.contentWindow.document.title);
+}
+
+document.body.style.zoom = "125%";
+if ( window.location !== window.parent.location ) {
+//In iframe
+  document.getElementById("MyFrame").src='https://editor.p5js.org/nrayan678/full/Cv-oTr5Ee'
+  document.getElementById("MyFrame").width=490
+  document.getElementById("MyFrame").positon=20
+}
+  else {
+    //Out of iframe
+  document.getElementById("MyFrame").src='https://editor.p5js.org/nrayan678/full/Cv-oTr5Ee'
+
+
+}
+   function newSrc() {
+      var e = document.getElementById("MySelectMenu");
+      var newSrc = e.options[e.selectedIndex].value;
+      document.getElementById("MyFrame").src=newSrc
+   }
+function ns(nse) {
+      document.getElementById("MyFrame").src=nse;
+      const boxes = document.querySelectorAll('.bt');
+
+// for (const box of boxes) {
+//   box.classList.add('hider');
+// }
+   }
+function fsify() {
+    fs = fullscreen();
+    fullscreen(!fs);
+}
+
+function share() {
+document.getElementById('txt').innerText=document.getElementById("MyFrame").src + ' ; QR Code at botttom'
+  inputString =str(document.getElementById("MyFrame").src)
+  let qr = qrcode(0, 'L')
+  qr.addData(inputString);
+  qr.make();
+  // create an image from it:
+  // paaramtetrs are cell size, margin size, and alt tag
+  // cell size default: 2
+  // margin zize defaault: 4 * cell size
+  let qrImg = qr.createImgTag(5, 20, "qr code");
+
+  // put the image into the HTML div:
+  tagDiv.html(qrImg);//print(inputString);
+}
+var menulength = document.getElementById("MySelectMenu").options.length
+
+    </script>
+    
+  </body>
+</html>
